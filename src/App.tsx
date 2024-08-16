@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
-import type {PropsWithChildren} from 'react';
-import { 
-  StyleSheet, 
+import React, { useState } from 'react';
+import type { PropsWithChildren } from 'react';
+import {
+  StyleSheet,
   View,
   ImageSourcePropType,
   Image,
   Pressable,
   Text
- } from 'react-native';
+} from 'react-native';
 
 import DiceOne from '../assets/One.png'
 import DiceTwo from '../assets/Two.png'
@@ -20,7 +20,7 @@ type DiceProps = PropsWithChildren<{
   imageUrl: ImageSourcePropType
 }>
 
-const Dice = ({imageUrl}: DiceProps):JSX.Element => {
+const Dice = ({ imageUrl }: DiceProps): JSX.Element => {
   return (
     <View>
       <Image style={styles.diceImage} source={imageUrl} />
@@ -55,7 +55,7 @@ function App(): React.JSX.Element {
       case 6:
         setDiceImage(DiceSix)
         break;
-    
+
       default:
         setDiceImage(DiceOne)
         break;
@@ -67,12 +67,12 @@ function App(): React.JSX.Element {
     <View style={styles.container}>
       <Dice imageUrl={diceImage} />
       <Pressable
-      onPress={rollDiceOnTap}
+        onPress={rollDiceOnTap}
       >
         <Text
-        style={styles.rollDiceBtnText}
+          style={styles.rollDiceBtnText}
         >
-        Roll the dice
+          Roll the dice
         </Text>
       </Pressable>
     </View>
@@ -109,3 +109,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+//=>30
